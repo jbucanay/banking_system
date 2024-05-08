@@ -1,5 +1,3 @@
-import javax.sound.midi.Soundbank;
-import java.security.SecureRandom;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -83,7 +81,7 @@ public class Main {
         System.out.println("Type 1 - Checking account");
         System.out.println("Type 2 - Savings account");
         System.out.println("Type 3 - Both savings and checking account");
-        Integer userAccountType = scanner.nextInt();
+        int userAccountType = scanner.nextInt();
         switch (userAccountType) {
             case 1 -> bank.openCheckingAccount(customerId);
             case 2 -> bank.openSavingsAccount(customerId);

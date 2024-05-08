@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class BankingSystem {
     private final HashMap<String, Customer> customers;
@@ -13,7 +12,7 @@ public class BankingSystem {
     }
 
     public void addCustomer(String customerId, String firstName, String lastName, String dateOfBirth){
-        customers.put(customerId, new Customer(customerId,firstName, lastName, dateOfBirth));
+        customers.put(customerId, new Customer(firstName, lastName, dateOfBirth));
     }
 
     public boolean getCustomerInfo(String customerId){
@@ -60,14 +59,6 @@ public class BankingSystem {
         openCheckingAccount(customerId);
     }
 
-
-    public HashMap<String, BankAccount> getSavingsAccount() {
-        return savingsAccount;
-    }
-
-    public HashMap<String, BankAccount> getCheckingAccount() {
-        return checkingAccount;
-    }
 
     public void withdrawFromAccount(String accountName, String customerId, double amount){
         try {
